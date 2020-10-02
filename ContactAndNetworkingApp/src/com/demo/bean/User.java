@@ -20,16 +20,17 @@ public class User {
 	private BufferedImage uimage;
 	private int uid;
 	private String supportQn;
+	private String supportAns;
 	
 	//Default Constructor
 	public User() {
 		super();
 	}
 
-	//Parameterized Constructor
+	//Parameterized constructor
 	public User(String uemail, String ufullName, String uname, String upass, String umob, String ugender, Date ubdate,
 			String uaddress, String ucity, String ustate, String ucountry, String ucompany, BufferedImage uimage,
-			int uid, String supportQn) {
+			int uid, String supportQn, String supportAns) {
 		super();
 		this.uemail = uemail;
 		this.ufullName = ufullName;
@@ -46,15 +47,17 @@ public class User {
 		this.uimage = uimage;
 		this.uid = uid;
 		this.supportQn = supportQn;
+		this.supportAns = supportAns;
 	}
 	
-	//Overrided toString method
+	//Tostring method
 	@Override
 	public String toString() {
 		return "User [uemail=" + uemail + ", ufullName=" + ufullName + ", uname=" + uname + ", upass=" + upass
 				+ ", umob=" + umob + ", ugender=" + ugender + ", ubdate=" + ubdate + ", uaddress=" + uaddress
 				+ ", ucity=" + ucity + ", ustate=" + ustate + ", ucountry=" + ucountry + ", ucompany=" + ucompany
-				+ ", uimage=" + uimage + ", uid=" + uid + ", supportQn=" + supportQn + "]";
+				+ ", uimage=" + uimage + ", uid=" + uid + ", supportQn=" + supportQn + ", supportAns=" + supportAns
+				+ "]";
 	}
 
 	//Getters and setters
@@ -177,5 +180,14 @@ public class User {
 	public void setSupportQn(String supportQn) {
 		this.supportQn = supportQn;
 	}
+
+	public String getSupportAns() {
+		return supportAns;
+	}
+
+	public void setSupportAns(String supportAns) {
+		this.supportAns = supportAns;
+	}
+	
 	
 }
